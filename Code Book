@@ -1,0 +1,23 @@
+Actions performed on data:
+Loading the data files given in the table below as data frames,
+File name	Data frame name
+X_test.txt	X_test
+y_test.txt	y_test
+subject_test.txt	sub_test
+X_train.txt	X_train
+y_train.txt	y_train
+subject_train.txt	sub_train
+features.txt	features
+activity_labels.txt	activities
+Merging X_train and X_test into one data frame: X_data
+Merging sub_train and sub_test into one data frame: sub_data
+Merging y_train and y_test into one data frame: labels
+Setting the column names of X_data to the names in features
+Setting the column name of sub_data to "subjectID"
+Change the activity number to activity name, by picking the rigth name from activities
+Setting the column name of sub_data to "activities"
+Subsetting X_data into temp_data keeping only the key columns and features containing std() or mean()
+Merge labels, sub_data and temp_data into the data frame data
+Melt data into melt_data, based on columns "subjectID" and "activities"
+Cast melt_data into tidy_data with the average of each variable for each activity and each subject
+Write tidy_data to file `./data/tidy_data.txt
